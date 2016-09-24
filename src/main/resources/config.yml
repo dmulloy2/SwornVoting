@@ -1,0 +1,78 @@
+# SwornVoting Config
+# (c) 2015 dmulloy2
+
+# Message Variables:
+#  - %player - player name
+#  - %site - voting site
+#  - %coins - coins received
+#  - %cash - cash received
+#  - %link - voting link
+
+# Message
+# Input - String
+message: "&b%player &ejust voted on &b%site &eand received &b%coins &ecoins!\n&eVote at&b %link&e!"
+
+# Cash message
+# Input - String
+cashMessage: "&2%cash &bhas been added to your account."
+
+# Extra help
+extraHelp:
+  - "&eVote daily to receive coins! Coins are used in the"
+  - "&evote shop to get rewards like god stuff and donor"
+  - "&etiers! Vote at the link below!"
+
+# Voting link
+# Input - String
+votingLink: "[Insert Link Here]"
+
+# Coins per vote
+# Input - int
+coins: 10
+
+# Cash per vote
+# Input - int
+cash: 500
+
+# Lucky Votes
+# chance (int) - chance out of 100
+# coins (int) - extra coins to be given
+# cash (int) - extra cash to be given
+# message (String) - message to be sent
+luckyVotes:
+  "lucky":
+    chance: 20
+    coins: 10
+    cash: 500
+    message: "&b%player &egot lucky and received &b%coins &eextra coins!"
+  "really lucky":
+    chance: 5
+    coins: 20
+    cash: 1000
+    message: "&b%player &egot really lucky and received &b%coins &eextra coins!"
+
+# Shop Items
+# Organized by world, * for all worlds
+# cost (int) - cost in coins
+# item (ItemStack) - item
+shopItems:
+  "default":
+    default: true
+    items:
+      "change me":
+        cost: 10
+        command: "give %player WOOD_SWORD 1"
+        item: "WOOD_SWORD:0, 1, name:&6&lChange_me!"
+
+# Shop Title
+# Input - String
+shopTitle: "               &l&nVoting Shop&r"
+
+# Auto Save
+# enabled - boolean
+# async - boolean
+# interval - int (in minutes)
+autoSave:
+  enabled: true
+  async: true
+  interval: 32

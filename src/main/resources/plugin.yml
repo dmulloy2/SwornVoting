@@ -1,0 +1,22 @@
+name: SwornVoting
+main: net.dmulloy2.swornvoting.SwornVoting
+author: dmulloy2
+version: ${project.version}
+softdepend: [Votifier]
+
+commands:
+  vote:
+    description: SwornVoting base command
+    usage: /<command> <args>
+    aliases: [swornvoting]
+
+permissions:
+  swornvoting.cmd.fake:
+    description: Allows access to '/vote fake'
+    default: op
+  swornvoting.cmd.leaderboard.force:
+    description: Allows users to force leaderboard update
+    default: op
+  swornvoting.cmd.reload:
+    description: Allows access to '/vote reload'
+    default: op
