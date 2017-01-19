@@ -144,7 +144,7 @@ public class VoteHandler implements Reloadable {
 
 				int chance = section.getInt("chance");
 				int coins = section.getInt("coins");
-				int cash = section.getInt("coins");
+				int cash = section.getInt("cash");
 				String message = section.getString("message");
 
 				LuckyVote vote = new LuckyVote(name, chance, coins, cash, message);
